@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="My test suite" verbose="1">
+   <parameter name="fecha" value="2017-10-19"/> 
+   <test name="My third test">
+        <groups>
+         <run>
+           <include name="Smoke"/>
+           <include name="Regression"/>
+         </run>      
+        </groups>
+        <classes>
+         <class name="com.automation.training.MyHomework">
+         </class>
+      </classes>   
+   </test>
+</suite>
