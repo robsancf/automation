@@ -1,4 +1,6 @@
 package com.automation.training;
+import java.util.Scanner;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -106,6 +108,40 @@ public class MyHomework {
 		      
 	}
 	
+	@Parameters({ "param1","param2" })
+	@Test(groups = { "Smoke" })
+	public void TestMultiplicacion2(String parametro1,String parametro2) {
+		 int a=30;
+		 int b=20;
+		 int result=1;
+		 int salida=0;
+		 System.out.println ("Empezamos el programa");
+	     System.out.println ("Por favor introduzca el nombre del parametro por teclado:");
+	     String entradaTeclado = "";
+	     Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+	     entradaTeclado = entradaEscaner.nextLine (); //Invocamos un método sobre un objeto Scanner
+	     System.out.println ("Entrada recibida por teclado es: \"" + entradaTeclado +"\"");
+	     while(salida==0){
+	    	 
+	     if(entradaTeclado.equals(parametro1)){
+	      result=a*b;
+	      System.out.println ("La multiplicacion de "+a+" y "+b+" es: "+result+"\n");
+	      salida=1;
+	     }
+	     else if(entradaTeclado.equals(parametro2)){
+	      result=a-b;
+		  System.out.println ("La resta de "+a+" y "+b+" es: "+result+"\n");
+		  salida=1;
+	     
+	     }
+	     else{
+	    	 System.out.println ("PARAMETRO INVALIDO\n");	    	 
+	    	 
+	     }
+	     
+	     }
+		      
+	}
 	
 	
 	
