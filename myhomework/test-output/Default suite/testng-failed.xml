@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="browser" value="firefox"/>
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.automation.homework.test.TestPuntoUno">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="testFlightSearchResultsPage"/>
+        </methods>
+      </class> <!-- com.automation.homework.test.TestPuntoUno -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

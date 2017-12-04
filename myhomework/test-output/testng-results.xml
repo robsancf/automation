@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="48525" started-at="2017-12-04T12:41:44Z" finished-at="2017-12-04T12:42:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="48525" started-at="2017-12-04T12:41:44Z" finished-at="2017-12-04T12:42:32Z">
+      <class name="com.automation.homework.test.TestPuntoUno">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="beforeSuite" is-config="true" duration-ms="14467" started-at="2017-12-04T07:41:29Z" finished-at="2017-12-04T07:41:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="testFlightSearchResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="testFlightSearchResultsPage" duration-ms="48496" started-at="2017-12-04T07:41:44Z" finished-at="2017-12-04T07:42:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightSearchResultsPage -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="afterSuite" is-config="true" duration-ms="1659" started-at="2017-12-04T07:42:32Z" finished-at="2017-12-04T07:42:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.automation.homework.test.TestPuntoUno -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
