@@ -1,5 +1,6 @@
 package com.automation.homework.pages;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +20,11 @@ public class FlightSelectedObjectPage extends BasePage {
 	
 	@FindBy(id="forcedChoiceNoThanks")
 	private WebElement noThanksLink;
-	
+
+
+	public void setInformationPage(FlightInformationPage informationPage) {
+	}
+
 	public WebElement getSelectedButton() {
 		return selectedButton;
 	}
@@ -41,20 +46,34 @@ public class FlightSelectedObjectPage extends BasePage {
 		this.noThanksLink = noThanksLink;
 	}
 	
-	public boolean closePopUp(){
+	public FlightInformationPage seleccionar(){
 		try{
+		getWait().until(ExpectedConditions.elementToBeClickable(selectedButton));
+		clickOnSelectedButton();
 		if(noThanksLink!=null){
 		getWait().until(ExpectedConditions.elementToBeClickable(noThanksLink));
 		clickOnNothanksLink();
-		return true;
+		
 		}
+		
 		}catch(TimeoutException e){
 		
-			return false;
+		   return new FlightInformationPage(getDriver());
 		
 		}
-		return false;
+		catch(StaleElementReferenceException e){
+			
+		return new FlightInformationPage(getDriver());
+		
+		}
+		return new FlightInformationPage(getDriver());
 	}
+
+	private void clickOnSelectedButton() {
+		selectedButton.click();
+		
+	}
+
 
 	
 

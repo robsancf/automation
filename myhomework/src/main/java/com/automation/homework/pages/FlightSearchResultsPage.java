@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,8 +53,9 @@ public class FlightSearchResultsPage extends BasePage {
 	private WebElement selectButton;
 	
     public List<WebElement> getSelectButtons()  {
-		int i=1;
-		List<WebElement> buttonsList=new ArrayList<WebElement>();
+    	List<WebElement> buttonsList=new ArrayList<WebElement>();
+    	try{
+		int i=1;		
 		Integer value=new Integer(i);
 		String val=value.toString();
 		String equispath="/html/body/div[2]/div[6]/section/div[7]/ul/li["+val+"]/div[2]/div/div[2]/div/button";
@@ -62,7 +64,6 @@ public class FlightSearchResultsPage extends BasePage {
 		buttonsList.add(element);
 		System.out.println("Agregado:"+equispath);
 		i++;
-		try{
 		while(element!=null){
 		    equispath="/html/body/div[2]/div[6]/section/div[7]/ul/li["+i+"]/div[2]/div/div[2]/div/button";
 		    element=getDriver().findElement(By.xpath(equispath));
@@ -71,8 +72,8 @@ public class FlightSearchResultsPage extends BasePage {
 		    //getWait().until(ExpectedConditions.elementToBeClickable(element));
 		    i++;
 
-		}
-		}catch(NoSuchElementException e){
+		}		
+    	}catch(NoSuchElementException e){
 			
 			return buttonsList;
 		}
@@ -81,17 +82,17 @@ public class FlightSearchResultsPage extends BasePage {
 	
 	public List<WebElement> getFlightDurations() {
 		
+		List<WebElement> flightDurationsList=new ArrayList<WebElement>();
+		try{
 		int i=1;
 		Integer value=new Integer(i);
-		String val=value.toString();
-		List<WebElement> flightDurationsList=new ArrayList<WebElement>();
+		String val=value.toString();		
 		String equispath="/html/body/div[2]/div[6]/section/div[7]/ul/li["+val+"]/div[2]/div/div[1]/div/div[2]/div/div[1]/div[2]/div[1]";
 		WebElement element=getDriver().findElement(By.xpath(equispath));
 		getWait().until(ExpectedConditions.elementToBeClickable(element));
 		flightDurationsList.add(element);
 		 System.out.println("Agregado:"+equispath);
-		i++;
-		try{
+		i++;		
 		while(element!=null){
 		    equispath="/html/body/div[2]/div[6]/section/div[7]/ul/li["+i+"]/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div[1]";
 		    element=getDriver().findElement(By.xpath(equispath));
@@ -110,13 +111,13 @@ public class FlightSearchResultsPage extends BasePage {
 	
 	public List<WebElement> getFlightDetailsBaggageFees(){
 		
+		List<WebElement> flightDetailsBaggageFeesLinks=new ArrayList<WebElement>();
+		try{
 		int i=1;
 		WebElement element=getDriver().findElement(By.xpath("/html/body/div[2]/div[6]/section/div[7]/ul/li["+i+"]/div[2]/div/div[2]/div/div/div[1]/span[2]"));
-		List<WebElement> flightDetailsBaggageFeesLinks=new ArrayList<WebElement>();
 		flightDetailsBaggageFeesLinks.add(element);
 		 System.out.println("Agregado:"+ "/html/body/div[2]/div[6]/section/div[7]/ul/li["+i+"]/div[2]/div/div[2]/div/div/div[1]/span[2]");
-		i++;
-		try{
+		i++;		
 		while(element!=null)
 		{
 		   element=getDriver().findElement(By.xpath("/html/body/div[2]/div[6]/section/div[7]/ul/li["+i+"]/div[2]/div/div[2]/div/div/div[1]/span[2]"));     
@@ -133,7 +134,7 @@ public class FlightSearchResultsPage extends BasePage {
 	}
 	
 	public boolean ShortestDurationIsOrdered(){
-		
+		try{
 		int i=1;		
 		WebElement element=getDriver().findElement(By.xpath("/html/body/div[2]/div[6]/section/div[7]/ul/li["+i+"]/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div[1]"));
 		getWait().until(ExpectedConditions.elementToBeClickable(element));
@@ -222,8 +223,20 @@ public class FlightSearchResultsPage extends BasePage {
 			}			
 		}
 		
-		return true;	
+		return true;
 		
+		}catch(StaleElementReferenceException e){
+			
+			return true;
+		
+		}catch(NoSuchElementException e){
+			
+			return true;
+			
+		}catch(TimeoutException e){
+			
+			return true;
+		}
 	}
 	
 	
@@ -309,10 +322,17 @@ public class FlightSearchResultsPage extends BasePage {
 	}
 	
 	public void orderingByShortestDuration(){
+		try{
 		getWait().until(ExpectedConditions.elementToBeClickable(sortListBoxCombo));
 		clickOnOrderingCombo();
 		getWait().until(ExpectedConditions.elementToBeClickable(shortestDurationSelectedValue));
-		clickOnShortestDurationSelectedValue();		
+		clickOnShortestDurationSelectedValue();
+		}catch(TimeoutException e){
+			System.out.println("Error de Timeout");
+		}catch(NoSuchElementException e){
+			System.out.println("Error de carga de elemento");
+			
+		}
 		
 	}
 	

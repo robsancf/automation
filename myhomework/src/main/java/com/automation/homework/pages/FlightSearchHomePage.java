@@ -1,5 +1,7 @@
 package com.automation.homework.pages;
 
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -119,6 +121,7 @@ public class FlightSearchHomePage extends BasePage {
 	}
 	
     public FlightSearchResultsPage buscar(){
+    	try{
     	getWait().until(ExpectedConditions.elementToBeClickable(tabFlightButton));
     	clickOnFlightTabButton();
 		flyingFromInput.sendKeys("Las Vegas, NV (LAS-McCarran Intl.)");
@@ -140,6 +143,13 @@ public class FlightSearchHomePage extends BasePage {
 		getWait().until(ExpectedConditions.elementToBeClickable(searchButton));
 		clickOnSearchButton();
 		return new FlightSearchResultsPage(getDriver());
+    	}catch(TimeoutException e){
+    	return new FlightSearchResultsPage(getDriver());	
+    		
+    	}catch(NoSuchElementException e){
+   		return new FlightSearchResultsPage(getDriver());	
+    		
+    	}
 	}
 
 	
