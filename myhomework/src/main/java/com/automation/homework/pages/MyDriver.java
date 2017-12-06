@@ -17,11 +17,11 @@ private WebDriver driver;
 			val=2;
 		switch (val) {
 		case 1:
-			System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "\\geckodriver.exe");
 			driver = new FirefoxDriver();
 			break;
 		case 2:
-			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "\\chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("disable-infobars");
 			options.addArguments("test-type");

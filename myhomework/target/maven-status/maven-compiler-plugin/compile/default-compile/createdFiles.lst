@@ -1,3 +1,6 @@
+com\automation\homework\pages\FlightInformationPage.class
+com\automation\homework\pages\FlightSelectedObjectPage.class
+com\automation\homework\pages\FlightBookingDetailsPage.class
 com\automation\homework\pages\BasePage.class
 com\automation\homework\pages\FlightSearchHomePage.class
 com\automation\homework\pages\FlightSearchResultsPage.class

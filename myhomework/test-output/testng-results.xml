@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61338" started-at="2017-12-06T15:22:43Z" finished-at="2017-12-06T15:23:45Z">
+  <suite name="Default suite" duration-ms="75435" started-at="2017-12-06T15:44:51Z" finished-at="2017-12-06T15:46:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="61338" started-at="2017-12-06T15:22:43Z" finished-at="2017-12-06T15:23:45Z">
+    <test name="Default test" duration-ms="75435" started-at="2017-12-06T15:44:51Z" finished-at="2017-12-06T15:46:07Z">
       <class name="com.automation.homework.test.TestPuntoUno">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="beforeSuite" is-config="true" duration-ms="34885" started-at="2017-12-06T10:22:08Z" finished-at="2017-12-06T10:22:43Z">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="beforeSuite" is-config="true" duration-ms="82117" started-at="2017-12-06T10:43:29Z" finished-at="2017-12-06T10:44:51Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="testFlightSearchResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="testFlightSearchResultsPage" duration-ms="61313" started-at="2017-12-06T10:22:43Z" finished-at="2017-12-06T10:23:45Z">
+        <test-method status="PASS" signature="testFlightSearchResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="testFlightSearchResultsPage" duration-ms="75403" started-at="2017-12-06T10:44:51Z" finished-at="2017-12-06T10:46:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFlightSearchResultsPage -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="afterSuite" is-config="true" duration-ms="3999" started-at="2017-12-06T10:23:45Z" finished-at="2017-12-06T10:23:49Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoUno@66a3ffec]" name="afterSuite" is-config="true" duration-ms="2107" started-at="2017-12-06T10:46:07Z" finished-at="2017-12-06T10:46:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

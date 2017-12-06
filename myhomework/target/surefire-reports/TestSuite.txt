@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 0.86 sec <<< FAILURE!
-beforeSuite(com.automation.homework.test.BaseTest)  Time elapsed: 0.595 sec  <<< FAILURE!
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 1.44 sec <<< FAILURE!
+beforeSuite(com.automation.homework.test.BaseTest)  Time elapsed: 1.107 sec  <<< FAILURE!
 org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeSuite on method beforeSuite but has not been marked @Optional or defined
 
@@ -33,7 +33,7 @@ Parameter 'browser' is required by BeforeSuite on method beforeSuite but has not
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-afterSuite(com.automation.homework.test.BaseTest)  Time elapsed: 0.712 sec  <<< FAILURE!
+afterSuite(com.automation.homework.test.BaseTest)  Time elapsed: 1.253 sec  <<< FAILURE!
 java.lang.NullPointerException
 	at com.automation.homework.test.BaseTest.afterSuite(BaseTest.java:25)
 

@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="testFlightSearchHomePage"/>
+          <include name="testFlightSearchResultsPage"/>
         </methods>
       </class> <!-- com.automation.homework.test.TestPuntoUno -->
     </classes>
