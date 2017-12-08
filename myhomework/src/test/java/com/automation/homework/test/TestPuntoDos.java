@@ -13,7 +13,9 @@ public class TestPuntoDos extends BaseTest {
 	public void testFlightPlusHotelResultsPage(){
 		
 		FlightPlusHotelSearchHomePage home=getHomePage2();
+		if(home!=null){
 		FlightPlusHotelSearchResultsPage results=home.buscar();
+		if(results!=null){
 		Assert.assertNotNull("Search Results: Null", results);
 		Assert.assertNotNull("Fake Origin: Null"+results.getFakeLinkOrigin());
 		Assert.assertNotNull("Fake Destiny: Null"+results.getFakeLinkDestiny());
@@ -21,6 +23,8 @@ public class TestPuntoDos extends BaseTest {
 		Assert.assertNotNull("Fake rooms label: Null"+results.getRoomsLabel());
 		Assert.assertNotNull("Travelers label: Null"+results.getTravelersLabel());
 		FlightPlusHotelDetailsPage details=results.ordenar();
+		}
+		}
 		
 	}
 

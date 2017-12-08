@@ -77,6 +77,8 @@ public class FlightPlusHotelSearchHomePage extends BasePage {
 		return new FlightPlusHotelSearchResultsPage(getDriver()) ;
 		}catch(NoSuchElementException e){
 		return new FlightPlusHotelSearchResultsPage(getDriver()) ;	
+		}catch(NullPointerException e){
+		return new FlightPlusHotelSearchResultsPage(getDriver()) ;	
 		}
 		
 		

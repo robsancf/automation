@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26666" started-at="2017-12-08T20:50:44Z" finished-at="2017-12-08T20:51:11Z">
+  <suite name="Default suite" duration-ms="59139" started-at="2017-12-08T21:15:26Z" finished-at="2017-12-08T21:16:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26666" started-at="2017-12-08T20:50:44Z" finished-at="2017-12-08T20:51:11Z">
+    <test name="Default test" duration-ms="59139" started-at="2017-12-08T21:15:26Z" finished-at="2017-12-08T21:16:25Z">
       <class name="com.automation.homework.test.TestPuntoDos">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="beforeSuite" is-config="true" duration-ms="24365" started-at="2017-12-08T15:50:20Z" finished-at="2017-12-08T15:50:44Z">
+        <test-method status="PASS" signature="testFlightPlusHotelResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoDos@3bfdc050]" name="testFlightPlusHotelResultsPage" duration-ms="1" started-at="2017-12-08T16:16:25Z" finished-at="2017-12-08T16:16:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightPlusHotelResultsPage -->
+      </class> <!-- com.automation.homework.test.TestPuntoDos -->
+      <class name="com.automation.homework.test.TestPuntoUno">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="beforeSuite" is-config="true" duration-ms="21539" started-at="2017-12-08T16:15:05Z" finished-at="2017-12-08T16:15:26Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +24,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="testFlightPlusHotelResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="testFlightPlusHotelResultsPage" duration-ms="26627" started-at="2017-12-08T15:50:44Z" finished-at="2017-12-08T15:51:11Z">
+        <test-method status="PASS" signature="testFlightSearchResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="testFlightSearchResultsPage" duration-ms="59091" started-at="2017-12-08T16:15:26Z" finished-at="2017-12-08T16:16:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFlightPlusHotelResultsPage -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="afterSuite" is-config="true" duration-ms="908" started-at="2017-12-08T15:51:11Z" finished-at="2017-12-08T15:51:12Z">
+        </test-method> <!-- testFlightSearchResultsPage -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="afterSuite" is-config="true" duration-ms="1279" started-at="2017-12-08T16:16:25Z" finished-at="2017-12-08T16:16:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.automation.homework.test.TestPuntoDos -->
+      </class> <!-- com.automation.homework.test.TestPuntoUno -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
