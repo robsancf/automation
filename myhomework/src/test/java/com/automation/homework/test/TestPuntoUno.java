@@ -55,7 +55,7 @@ public class TestPuntoUno extends BaseTest {
 		Assert.assertTrue("Phone Number Validation: Validation absent",bookingDetails.isValidatedPhoneNumber());
 		Assert.assertTrue("Card Holder Name Validation: Validation absent",bookingDetails.isValidatedCardHolderName());
 		Assert.assertTrue("Credit Card Validation: Validation absent",bookingDetails.isValidatedCreditCard());
-		
+		bookingDetails.getDriver().close();
 		
 	}
 	

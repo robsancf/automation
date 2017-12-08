@@ -4,13 +4,13 @@
   <parameter name="browser" value="firefox"/>
   <test name="Default test(failed)">
     <classes>
-      <class name="com.automation.homework.test.TestPuntoUno">
+      <class name="com.automation.homework.test.TestPuntoDos">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="testFlightSearchResultsPage"/>
+          <include name="testFlightPlusHotelResultsPage"/>
         </methods>
-      </class> <!-- com.automation.homework.test.TestPuntoUno -->
+      </class> <!-- com.automation.homework.test.TestPuntoDos -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
