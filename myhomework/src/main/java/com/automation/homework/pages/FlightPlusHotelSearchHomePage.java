@@ -84,11 +84,6 @@ public class FlightPlusHotelSearchHomePage extends BasePage {
 		
 	}
 
-	private void clickOnLayoutToClick() {
-		// TODO Auto-generated method stub
-		layoutToClick.click();
-	}
-
 	private void clickOnSearchButton() {
 		// TODO Auto-generated method stub
 		searchButton.click();

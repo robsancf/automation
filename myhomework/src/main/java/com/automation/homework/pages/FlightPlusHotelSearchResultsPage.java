@@ -13,8 +13,8 @@ public class FlightPlusHotelSearchResultsPage extends BasePage {
 	public FlightPlusHotelSearchResultsPage(WebDriver pDriver) {
 		super(pDriver);
 		
-	}
-	
+	}	
+		
 	@FindBy(xpath="/html/body/div[4]/form/div[3]/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[1]/button")
 	private WebElement fakeLinkOrigin;	
 	
@@ -33,20 +33,26 @@ public class FlightPlusHotelSearchResultsPage extends BasePage {
 	@FindBy(xpath="/html/body/div[4]/form/div[11]/div[2]/div[13]/section/div/div[3]/div/div[1]/div[2]/div/fieldset/ul/li[3]/button")
 	private WebElement priceOrderLink;
 	
+	@FindBy(xpath="/html/body/div[4]/form/div[11]/div[2]/div[13]/section/div/div[16]/section/article[1]/div[2]/div/div[1]/div[2]/ul[1]/li[4]")
+	private WebElement hotelName;
+	
+	
 	public FlightPlusHotelDetailsPage ordenar(){
 		try{
 		getWait().until(ExpectedConditions.elementToBeClickable(priceOrderLink));
 		clickOnPriceOrderLink();
 		int i=1;
-		WebElement element=getDriver().findElement(By.xpath("/html/body/div[4]/form/div[11]/div[2]/div[13]/section/div/div[16]/section/article[3]/div[2]/div/div[1]/div[2]/ul[1]/li["+i+"]/strong/span[1]"));
+		WebElement element=getDriver().findElement(By.xpath("/html/body/div[4]/form/div[11]/div[2]/div[13]/section/div/div[16]/section/article["+i+"]/div[2]/div/div[1]/div[2]/ul[1]/li[5]/strong/span[1]"));
+		hotelName=getDriver().findElement(By.xpath("/html/body/div[4]/form/div[11]/div[2]/div[13]/section/div/div[16]/section/article["+i+"]/div[2]/div/div[1]/div[2]/ul[1]/li[4]"));
 		if(element.getText().equals("3.5 out of 5.0")){			
 			getWait().until(ExpectedConditions.elementToBeClickable(element));
-		    element.click();
+			element.click();
 		}
 		else{
 		i++;
 		while(element!=null && i!=0){
-			element=getDriver().findElement(By.xpath("/html/body/div[4]/form/div[11]/div[2]/div[13]/section/div/div[16]/section/article[3]/div[2]/div/div[1]/div[2]/ul[1]/li["+i+"]/strong/span[1]"));
+			element=getDriver().findElement(By.xpath("/html/body/div[4]/form/div[11]/div[2]/div[13]/section/div/div[16]/section/article["+i+"]/div[2]/div/div[1]/div[2]/ul[1]/li[5]/strong/span[1]"));
+			hotelName=getDriver().findElement(By.xpath("/html/body/div[4]/form/div[11]/div[2]/div[13]/section/div/div[16]/section/article["+i+"]/div[2]/div/div[1]/div[2]/ul[1]/li[4]"));
 			if(element.getText().equals("3.5 out of 5.0")){
 				getWait().until(ExpectedConditions.elementToBeClickable(element));
 				element.click();	
@@ -113,6 +119,17 @@ public class FlightPlusHotelSearchResultsPage extends BasePage {
 
 	public void setPriceOrderLink(WebElement priceOrderLink) {
 		this.priceOrderLink = priceOrderLink;
+	}
+	
+	public String getHotelName() {
+		try{
+		return hotelName.getText();
+		}catch(NoSuchElementException e){
+			return "Empty";
+		}
+	}
+	public void setHotelName(WebElement hotelName) {
+		this.hotelName = hotelName;
 	}
 
 	

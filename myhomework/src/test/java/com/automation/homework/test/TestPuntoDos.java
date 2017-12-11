@@ -1,7 +1,12 @@
 package com.automation.homework.test;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
+import com.automation.homework.pages.CarDetailPage;
+import com.automation.homework.pages.CarPage;
+import com.automation.homework.pages.FirstRoomDetailPage;
+import com.automation.homework.pages.FirstRoomPage;
 import com.automation.homework.pages.FlightPlusHotelDetailsPage;
 import com.automation.homework.pages.FlightPlusHotelSearchHomePage;
 import com.automation.homework.pages.FlightPlusHotelSearchResultsPage;
@@ -23,6 +28,14 @@ public class TestPuntoDos extends BaseTest {
 		Assert.assertNotNull("Fake rooms label: Null"+results.getRoomsLabel());
 		Assert.assertNotNull("Travelers label: Null"+results.getTravelersLabel());
 		FlightPlusHotelDetailsPage details=results.ordenar();
+		Assert.assertNotNull("Details: Null",details);	
+		Assert.assertEquals(results.getHotelName(), details.getHotelName());
+		FirstRoomPage room=details.pieza();
+		Assert.assertNotNull("Room: Empty",room);
+		FirstRoomDetailPage roomDetail=room.seleccionar();
+		CarPage car=roomDetail.seleccionar();
+		CarDetailPage det=car.detalle();
+		Assert.assertEquals("$32", det.getPrice().getText());
 		}
 		}
 		

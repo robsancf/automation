@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59139" started-at="2017-12-08T21:15:26Z" finished-at="2017-12-08T21:16:25Z">
+  <suite name="Default suite" duration-ms="63724" started-at="2017-12-11T06:08:28Z" finished-at="2017-12-11T06:09:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59139" started-at="2017-12-08T21:15:26Z" finished-at="2017-12-08T21:16:25Z">
+    <test name="Default test" duration-ms="63724" started-at="2017-12-11T06:08:28Z" finished-at="2017-12-11T06:09:32Z">
       <class name="com.automation.homework.test.TestPuntoDos">
-        <test-method status="PASS" signature="testFlightPlusHotelResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoDos@3bfdc050]" name="testFlightPlusHotelResultsPage" duration-ms="1" started-at="2017-12-08T16:16:25Z" finished-at="2017-12-08T16:16:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFlightPlusHotelResultsPage -->
-      </class> <!-- com.automation.homework.test.TestPuntoDos -->
-      <class name="com.automation.homework.test.TestPuntoUno">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="beforeSuite" is-config="true" duration-ms="21539" started-at="2017-12-08T16:15:05Z" finished-at="2017-12-08T16:15:26Z">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="beforeSuite" is-config="true" duration-ms="21593" started-at="2017-12-11T01:08:07Z" finished-at="2017-12-11T01:08:28Z">
           <params>
             <param index="0">
               <value>
@@ -24,15 +18,80 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="testFlightSearchResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="testFlightSearchResultsPage" duration-ms="59091" started-at="2017-12-08T16:15:26Z" finished-at="2017-12-08T16:16:25Z">
+        <test-method status="FAIL" signature="testFlightPlusHotelResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="testFlightPlusHotelResultsPage" duration-ms="63685" started-at="2017-12-11T01:08:28Z" finished-at="2017-12-11T01:09:32Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: /html/body/div[3]/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/div[2]/span[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ROBPC-PC', ip: '192.168.0.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\ROB PC\AppData\Local\Temp\rust_mozprofile.Ycsgwvhn1WbY, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=57.0, platformVersion=6.1, moz:processID=9064.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=false}]
+Session ID: e83acf1a-89b8-4691-a145-5106f5cb34f8
+*** Element info: {Using=xpath, value=/html/body/div[3]/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/div[2]/span[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div[3]/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/div[2]/span[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ROBPC-PC', ip: '192.168.0.11', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\ROB PC\AppData\Local\Temp\rust_mozprofile.Ycsgwvhn1WbY, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=57.0, platformVersion=6.1, moz:processID=9064.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=false}]
+Session ID: e83acf1a-89b8-4691-a145-5106f5cb34f8
+*** Element info: {Using=xpath, value=/html/body/div[3]/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/div[2]/span[1]}
+	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.getText(Unknown Source)
+	at com.automation.homework.test.TestPuntoDos.testFlightPlusHotelResultsPage(TestPuntoDos.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFlightSearchResultsPage -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="afterSuite" is-config="true" duration-ms="1279" started-at="2017-12-08T16:16:25Z" finished-at="2017-12-08T16:16:27Z">
+        </test-method> <!-- testFlightPlusHotelResultsPage -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="afterSuite" is-config="true" duration-ms="778" started-at="2017-12-11T01:09:32Z" finished-at="2017-12-11T01:09:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.automation.homework.test.TestPuntoUno -->
+      </class> <!-- com.automation.homework.test.TestPuntoDos -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
