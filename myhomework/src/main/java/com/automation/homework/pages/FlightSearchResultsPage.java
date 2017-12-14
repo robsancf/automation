@@ -148,7 +148,7 @@ public class FlightSearchResultsPage extends BasePage {
 	    hora2 = time.substring(1,2);
 		hora=hora+hora2;
 		segundo=time.substring(4,5);
-		   if(!time.substring(5,6).equals("s")){
+		   if(!time.substring(5,6).equals("m")){
 		   segundo2=time.substring(5,6);
 		   System.out.println("Hora"+hora);
 		   System.out.println("Segundo"+segundo);
@@ -159,7 +159,7 @@ public class FlightSearchResultsPage extends BasePage {
 		}
 		else{
 		 segundo=time.substring(3,4);
-		  if(!time.substring(4,5).equals("s")){
+		  if(!time.substring(4,5).equals("m")){
 			  segundo2=time.substring(4,5);
 			  System.out.println("Hora"+hora);
 			  System.out.println("Segundo"+segundo);
@@ -183,7 +183,7 @@ public class FlightSearchResultsPage extends BasePage {
 		    hora2 = time.substring(1,2);
 			hora=hora+hora2;
 			segundo=time.substring(4,5);
-			   if(!time.substring(5,6).equals("s")){
+			   if(!time.substring(5,6).equals("m")){
 			   segundo2=time.substring(5,6);
 			   System.out.println("Hora"+hora);
 			   System.out.println("Segundo"+segundo);
@@ -194,7 +194,7 @@ public class FlightSearchResultsPage extends BasePage {
 			}
 			else{
 			 segundo=time.substring(3,4);
-			  if(!time.substring(4,5).equals("s")){
+			  if(!time.substring(4,5).equals("m")){
 				  segundo2=time.substring(4,5);
 				  System.out.println("Hora"+hora);
 				  System.out.println("Segundo"+segundo);

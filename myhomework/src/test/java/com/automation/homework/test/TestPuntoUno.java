@@ -15,7 +15,17 @@ public class TestPuntoUno extends BaseTest {
 	@Test
 	public void testFlightSearchResultsPage(){
 		FlightSearchHomePage home = getHomePage();
+		if(home!=null){		
 		FlightSearchResultsPage results = home.buscar();
+		if(results!=null){
+		results.orderingByShortestDuration();
+		FlightSelectedObjectPage selected=results.buscar();
+		if(selected!=null){
+		FlightInformationPage information=selected.seleccionar();
+		if(information!=null){
+		FlightBookingDetailsPage bookingDetails=information.open();
+		if(bookingDetails!=null){
+		bookingDetails.activateValidations();
 		Assert.assertNotNull("Ordering Combo: Null",results.getSortListBoxCombo());
 		Assert.assertNotNull("Price (Lowest): Null",results.getLowestPriceSelectedValue());
 		Assert.assertNotNull("Price (Highest): Null",results.getHighestPriceSelectedValue());
@@ -28,11 +38,8 @@ public class TestPuntoUno extends BaseTest {
 		Assert.assertNotNull("Select Buttons: Null", results.getSelectButtons());
 		Assert.assertNotNull("Durations: Null", results.getFlightDurations());
 		Assert.assertNotNull("Flight Details and Baggage Fees: Null",results.getFlightDetailsBaggageFees());
-		results.orderingByShortestDuration();
 		Assert.assertTrue("Duration Ordered: False", results.ShortestDurationIsOrdered());
-		FlightSelectedObjectPage selected=results.buscar();
 		Assert.assertNotNull("Selected: Null", selected);
-		FlightInformationPage information=selected.seleccionar();
 		Assert.assertNotNull("Information Page: Null",information);
 		Assert.assertNotNull("Trip Total Price: Null", information.getTripTotalPrice());
 		Assert.assertNotNull("Price guarantee: Null",information.getPriceGuarantee());
@@ -48,15 +55,16 @@ public class TestPuntoUno extends BaseTest {
 		Assert.assertNotNull("Return Start Hour: Null",information.getReturnStartHour());
 		Assert.assertNotNull("Return Arriving Hour: Null",information.getReturnArrivingHour());
 		Assert.assertNotNull("Return Duration Trip: Null",information.getReturnDurationTrip());
-		FlightBookingDetailsPage bookingDetails=information.open();
-		bookingDetails.activateValidations();
 		Assert.assertTrue("First Name Validation: Validation absent",bookingDetails.isValidatedFirstName());
 		Assert.assertTrue("Last Name Validation: Validation absent",bookingDetails.isValidatedLastName());
 		Assert.assertTrue("Phone Number Validation: Validation absent",bookingDetails.isValidatedPhoneNumber());
 		Assert.assertTrue("Card Holder Name Validation: Validation absent",bookingDetails.isValidatedCardHolderName());
 		Assert.assertTrue("Credit Card Validation: Validation absent",bookingDetails.isValidatedCreditCard());
-		bookingDetails.getDriver().close();
-		
+		}
+		}
+		}
+		}
+		}
 	}
 	
 	

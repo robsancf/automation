@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="2" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67532" started-at="2017-12-14T06:51:05Z" finished-at="2017-12-14T06:52:13Z">
+  <suite name="Default suite" duration-ms="71559" started-at="2017-12-14T07:33:39Z" finished-at="2017-12-14T07:34:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="67532" started-at="2017-12-14T06:51:05Z" finished-at="2017-12-14T06:52:13Z">
+    <test name="Default test" duration-ms="71559" started-at="2017-12-14T07:33:39Z" finished-at="2017-12-14T07:34:50Z">
       <class name="com.automation.homework.test.TestPuntoDos">
-        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="beforeSuite" is-config="true" duration-ms="19446" started-at="2017-12-14T01:50:46Z" finished-at="2017-12-14T01:51:05Z">
+        <test-method status="PASS" signature="testFlightPlusHotelResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoDos@3bfdc050]" name="testFlightPlusHotelResultsPage" duration-ms="8" started-at="2017-12-14T02:34:50Z" finished-at="2017-12-14T02:34:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightPlusHotelResultsPage -->
+      </class> <!-- com.automation.homework.test.TestPuntoDos -->
+      <class name="com.automation.homework.test.TestPuntoUno">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="beforeSuite" is-config="true" duration-ms="21304" started-at="2017-12-14T02:33:17Z" finished-at="2017-12-14T02:33:39Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +24,52 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="testFlightPlusHotelResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="testFlightPlusHotelResultsPage" duration-ms="67490" started-at="2017-12-14T01:51:05Z" finished-at="2017-12-14T01:52:13Z">
+        <test-method status="FAIL" signature="testFlightSearchResultsPage()[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="testFlightSearchResultsPage" duration-ms="71506" started-at="2017-12-14T02:33:39Z" finished-at="2017-12-14T02:34:50Z">
+          <exception class="junit.framework.AssertionFailedError">
+            <message>
+              <![CDATA[Duration Ordered: False]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.AssertionFailedError: Duration Ordered: False
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at com.automation.homework.test.TestPuntoUno.testFlightSearchResultsPage(TestPuntoUno.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.AssertionFailedError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFlightPlusHotelResultsPage -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoDos@66a3ffec]" name="afterSuite" is-config="true" duration-ms="904" started-at="2017-12-14T01:52:13Z" finished-at="2017-12-14T01:52:13Z">
+        </test-method> <!-- testFlightSearchResultsPage -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.automation.homework.test.TestPuntoUno@77caeb3e]" name="afterSuite" is-config="true" duration-ms="2569" started-at="2017-12-14T02:34:50Z" finished-at="2017-12-14T02:34:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.automation.homework.test.TestPuntoDos -->
+      </class> <!-- com.automation.homework.test.TestPuntoUno -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
