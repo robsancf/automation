@@ -2,6 +2,7 @@ package com.automation.homework.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -66,6 +67,8 @@ public class FlightPlusHotelSearchResultsPage extends BasePage {
 		return new FlightPlusHotelDetailsPage(getDriver());
 		}catch(NoSuchElementException e){
 		return new FlightPlusHotelDetailsPage(getDriver());	
+		}catch(StaleElementReferenceException e){
+		return new FlightPlusHotelDetailsPage(getDriver());	
 		}
 		return new FlightPlusHotelDetailsPage(getDriver());	
 		
@@ -123,10 +126,17 @@ public class FlightPlusHotelSearchResultsPage extends BasePage {
 	
 	public String getHotelName() {
 		try{
+		Thread.sleep(2500);
 		return hotelName.getText();
 		}catch(NoSuchElementException e){
 			return "Empty";
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			return "Empty";
+		}catch(StaleElementReferenceException e){
+			return "Empty";
 		}
+		
 	}
 	public void setHotelName(WebElement hotelName) {
 		this.hotelName = hotelName;

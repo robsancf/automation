@@ -1,6 +1,5 @@
 package com.automation.homework.test;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
 import com.automation.homework.pages.CarDetailPage;
@@ -21,24 +20,35 @@ public class TestPuntoDos extends BaseTest {
 		if(home!=null){
 		FlightPlusHotelSearchResultsPage results=home.buscar();
 		if(results!=null){
+		FlightPlusHotelDetailsPage details=results.ordenar();
+		if(details!=null){
+		FirstRoomPage room=details.pieza();
+		if(room!=null){
+		FirstRoomDetailPage roomDetail=room.seleccionar();
+		if(roomDetail!=null){
+		CarPage car=roomDetail.seleccionar();
+		if(car!=null){
+		CarDetailPage det=car.detalle();
+		if(det!=null){
 		Assert.assertNotNull("Search Results: Null", results);
 		Assert.assertNotNull("Fake Origin: Null"+results.getFakeLinkOrigin());
 		Assert.assertNotNull("Fake Destiny: Null"+results.getFakeLinkDestiny());
 		Assert.assertNotNull("Fake Link Dates: Null"+results.getFakeLinkDates());
 		Assert.assertNotNull("Fake rooms label: Null"+results.getRoomsLabel());
 		Assert.assertNotNull("Travelers label: Null"+results.getTravelersLabel());
-		FlightPlusHotelDetailsPage details=results.ordenar();
-		Assert.assertNotNull("Details: Null",details);	
-		Assert.assertEquals(results.getHotelName(), details.getHotelName());
-		FirstRoomPage room=details.pieza();
-		Assert.assertNotNull("Room: Empty",room);
-		FirstRoomDetailPage roomDetail=room.seleccionar();
-		CarPage car=roomDetail.seleccionar();
-		CarDetailPage det=car.detalle();
-		Assert.assertEquals("$32", det.getPrice().getText());
+		Assert.assertNotNull("Details: Null",details);		
+		Assert.assertEquals(results.getHotelName(), details.getHotelName());		
+		Assert.assertNotNull("Room: Empty",room);		
+		Assert.assertNotNull("Detail: Null",det);
+		Assert.assertNotNull("Price: Null",det.getPrice());
 		}
 		}
-		
+		}
+		}
+		}
+		}
+		}
+	
 	}
 
 }

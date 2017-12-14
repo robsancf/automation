@@ -17,11 +17,13 @@ public class FlightPlusHotelDetailsPage extends BasePage {
 	@FindBy(xpath="/html/body/div[4]/div[6]/header/div[3]/div[1]/strong/span[2]")
 	private WebElement stars;
 	
-	@FindBy(id="hotel-name")
+	@FindBy(xpath="//*[@id='hotel-name']")
 	private WebElement hotelName;
 	
 	@FindBy(xpath="/html/body/div[4]/div[6]/section/div[3]/div/div/section/nav/ul/li[2]/a/span")
 	private WebElement hotelRooms;
+
+	private String hotlName;
 	
 	public WebElement getHotelRooms() {
 		return hotelRooms;
@@ -45,7 +47,11 @@ public class FlightPlusHotelDetailsPage extends BasePage {
 
 	public String getHotelName() {
 		try{
-		return hotelName.getText();
+		//System.out.println("Hotel: "+hotelName.getText());
+		if(hotlName!=null){
+		return hotlName;
+		}
+		return "Empty";
 		}catch(NoSuchElementException e){
 			return "Empty";
 		}
@@ -53,7 +59,11 @@ public class FlightPlusHotelDetailsPage extends BasePage {
 	
 	public FirstRoomPage pieza(){
 		try{
+		System.out.println("Hptel 2 Antesito"+hotelName.getText());
+		Thread.sleep(2500);
 		getWait().until(ExpectedConditions.elementToBeClickable(hotelName));
+		System.out.println("Nombre Hotel 2"+hotelName.getText());
+		this.hotlName=hotelName.getText();		
 		getWait().until(ExpectedConditions.elementToBeClickable(hotelRooms));
 		clickOnHotelRooms();
 		return new FirstRoomPage(getDriver());
@@ -61,6 +71,9 @@ public class FlightPlusHotelDetailsPage extends BasePage {
 		return new FirstRoomPage(getDriver());
 		}catch(NoSuchElementException e){
 		return new FirstRoomPage(getDriver());	
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			return new FirstRoomPage(getDriver());
 		}	
 		
 	}
